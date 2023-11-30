@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import QuestionBuilder from './components/QuestionBuilder';
 import Exam from './components/Exam';
  
@@ -8,12 +8,12 @@ import Exam from './components/Exam';
 
 function App() { 
   return (
-    <BrowserRouter>
+    <HashRouter>
         <Routes>
           <Route path="/" element={<QuestionBuilder />} />
           <Route path="/exam" element={<Exam />} />
         </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

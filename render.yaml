@@ -16,8 +16,9 @@ services:
     startCommand: npm start
     env:
       - key: NODE_ENV
-        value: production
-    routes:
-      - type: rewrite
-        sourcePath: /.*
-        destination: /client/index.html
+        value: production 
+  routes:
+    - type: rewrite
+      sourcePath: /.*
+      destination: /client/index.html
+
