@@ -1,0 +1,23 @@
+services:
+  - name: backend
+    type: web
+    buildCommand: npm install && npm run build
+    startCommand: node server.js
+    env:
+      - key: NODE_ENV
+        value: production
+    routes:
+      - type: http
+        sourcePath: /api
+
+  - name: client
+    type: web
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    env:
+      - key: NODE_ENV
+        value: production
+    routes:
+      - type: rewrite
+        sourcePath: /.*
+        destination: /client/index.html
