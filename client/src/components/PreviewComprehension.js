@@ -5,7 +5,7 @@ const PreviewComprehension = () => {
 
   useEffect(() => {
     async function fetchComprehensionFunction() {
-      const data = await fetch("http://localhost:5000/api/get/comprehensions");
+      const data = await fetch(`${process.env.REACT_APP_URL}/api/get/comprehensions`);
       const tempData = await data.json();
       console.log(tempData);
       setComprehensionData(tempData[0]);

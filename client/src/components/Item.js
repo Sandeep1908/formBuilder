@@ -26,7 +26,7 @@ const Items = ({options, description}) => {
     const data = {};
     data.description = description;
     data.Categorize = transformedData;
-    fetch("http://localhost:5000/api/save/categorize", {
+    fetch(`${process.env.REACT_APP_URL}/api/save/categorize`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

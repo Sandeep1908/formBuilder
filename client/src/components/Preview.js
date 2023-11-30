@@ -7,7 +7,7 @@ const Preview = () => {
 
   useEffect(()=>{
     async function fetchCategorize(){
-    const data = await fetch("http://localhost:5000/api/get/categorize");
+    const data = await fetch(`${process.env.REACT_APP_URL}/api/get/categorize`);
     const categorize = await data.json();
     setListOfCategorize(categorize.data);
     console.log(categorize)

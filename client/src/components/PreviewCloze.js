@@ -6,7 +6,7 @@ const PreviewCloze = () => {
   const [words, setWords] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/get/cloze")
+    fetch(`${process.env.REACT_APP_URL}/api/get/cloze`)
       .then((response) => response.json())
       .then((responseData) => {
         console.log("response",responseData);

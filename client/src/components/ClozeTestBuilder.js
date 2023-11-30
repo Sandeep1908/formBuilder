@@ -11,7 +11,7 @@ function ClozeTestBuilder() {
     const clozeObject = {};
     clozeObject.sentence = underlineSelectedWords();
     clozeObject.options = selectedWords;
-    fetch("http://localhost:5000/api/save/cloze", {
+    fetch(`${process.env.REACT_APP_URL}/api/save/cloze`, {
         method: "POST",
         body:JSON.stringify(clozeObject),
         headers:{

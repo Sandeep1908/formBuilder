@@ -12,7 +12,7 @@ function Comprehension() {
     comprehensionObj.comprehension = comprehensionText;
     comprehensionObj.mcqs = mcqs;
 
-    fetch("http://localhost:5000/api/save/comprehensions", {
+    fetch(`${process.env.REACT_APP_URL}/api/save/comprehensions`, {
       method: "POST",
       body: JSON.stringify(comprehensionObj),
       headers:{
