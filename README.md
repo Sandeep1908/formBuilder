@@ -11,3 +11,4 @@ CD /CLIENT
 NPM INSTALL
 NPM START
 
+deploy: https://formbuilder-mern.netlify.app/
